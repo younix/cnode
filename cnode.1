@@ -1,0 +1,32 @@
+.Dd $Mdocdate$
+.Dt CNODE 1
+.Sh NAME
+.Nm cnode
+.Nd calculate the CARP node for an IP paket in IP balancing mode
+.Sh SYNOPSIS
+.Nm
+.Ar SRC-IP
+.Ar DST-IP
+.Ar MASK ...
+.Sh DESCRIPTION
+The
+.Nm
+utility generate hash from given source and destination IP and match it with
+the mask from CARP-Nodes.
+MASK is given in decimal numbers.
+.Nm
+writes the MASK for the calculated node to stdout.
+At the moment only CAPR IP balancing is implemented.
+.Sh EXIT STATUS
+.Ex -std
+.Sh EXAMPLES
+cnode 192.0.2.23 198.51.100.42 1 2
+.Sh SEE ALSO
+.Xr carp 4
+.Sh STANDARDS
+This program works for CARP version 2.
+.Sh AUTHORS
+The
+.Nm 
+program was written by
+.An Jan Klemkow Aq j.klemkow@wemelug.de .
